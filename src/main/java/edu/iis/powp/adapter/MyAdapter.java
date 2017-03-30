@@ -34,6 +34,8 @@ public class MyAdapter implements IPlotter
         line.setEndCoordinates(x, y);
 
 		drawPanelController.drawLine(line);
+		this.startX = x;
+		this.startY = y;
     }
 
     @Override
