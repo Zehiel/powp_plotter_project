@@ -27,9 +27,13 @@ public class TestPlotSoftPatterns {
      * @param context Application context.
      */
     private static void setupPresetTests(Context context) {
-        SelectTestFigureOptionListener selectTestFigureOptionListener = new SelectTestFigureOptionListener();
+        SelectTestFigureOptionListener selectTestFigureOptionListenerScript1 = new SelectTestFigureOptionListener(1);
+        SelectTestFigureOptionListener selectTestFigureOptionListenerScript2 = new SelectTestFigureOptionListener(2);
 
-        context.addTest("Figure Joe 1", selectTestFigureOptionListener);
+
+        context.addTest("Figure Joe 1", selectTestFigureOptionListenerScript1);
+        context.addTest("Figure Joe 2", selectTestFigureOptionListenerScript2);
+
     }
 
     /**
@@ -56,7 +60,7 @@ public class TestPlotSoftPatterns {
     private static void setupDefaultDrawerVisibilityManagement(Context context) {
         DefaultDrawerFrame defaultDrawerWindow = DefaultDrawerFrame.getDefaultDrawerFrame();
         context.addComponentMenuElementWithCheckBox(DrawPanelController.class, "Default Drawer Visibility",
-                new SelectChangeVisibleOptionListener(defaultDrawerWindow), true);
+                new SelectChangeVisibleOptionListener(defaultDrawerWindow), false);
         defaultDrawerWindow.setVisible(false);
     }
 
