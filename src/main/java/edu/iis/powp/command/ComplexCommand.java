@@ -13,6 +13,10 @@ public class ComplexCommand implements IPlotterCommand {
 		super();		
 	}
 
+	public ComplexCommand(List<IPlotterCommand> commands) {
+		this.commands = commands;
+	}
+
 	@Override
 	public void execute(IPlotter plotterDriver) {
 		for (IPlotterCommand plotterCommand : commands) {			

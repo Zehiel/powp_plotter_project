@@ -6,7 +6,12 @@ public class CommandSetPosition implements IPlotterCommand {
 
 	private int x;
 	private int y;
-	
+
+	public CommandSetPosition(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
 	@Override
 	public void execute(IPlotter plotter) {
 		// TODO Auto-generated method stub
