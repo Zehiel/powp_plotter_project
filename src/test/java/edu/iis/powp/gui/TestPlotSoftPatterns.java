@@ -31,10 +31,14 @@ public class TestPlotSoftPatterns {
     private static void setupPresetTests(Context context) {
         SelectTestFigureOptionListener selectTestFigureOptionListenerScript1 = new SelectTestFigureOptionListener(1);
         SelectTestFigureOptionListener selectTestFigureOptionListenerScript2 = new SelectTestFigureOptionListener(2);
+        SelectTestFigureOptionListener selectTestFigureOptionListenerScript3 = new SelectTestFigureOptionListener(3);
+        SelectTestFigureOptionListener selectTestFigureOptionListenerScript4 = new SelectTestFigureOptionListener(4);
 
 
         context.addTest("Figure Joe 1", selectTestFigureOptionListenerScript1);
         context.addTest("Figure Joe 2", selectTestFigureOptionListenerScript2);
+        context.addTest("Rectangle", selectTestFigureOptionListenerScript3);
+        context.addTest("Triangle", selectTestFigureOptionListenerScript4);
 
     }
 
